@@ -1,0 +1,107 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fceabb, #f8b500);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.game-container {
+  background-color: #ffffffcc;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 400px;
+}
+
+h1 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.mode-toggle button {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.mode-toggle button:hover {
+  background-color: #1976d2;
+}
+
+.scoreboard {
+  margin: 20px 0 10px;
+  font-size: 18px;
+}
+
+.countdown {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #e91e63;
+  display: none;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.choices {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.choices div p {
+  font-weight: bold;
+}
+
+.choices button {
+  font-size: 25px;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.choices button:hover {
+  transform: scale(1.1);
+  background-color: #388e3c;
+}
+
+.result p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.reset {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.reset:hover {
+  background-color: #c62828;
+}
+
+.hidden {
+  display: none;
+}

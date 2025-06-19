@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="game-container">
+    <h1>Rock Paper Scissors</h1>
+
+    <div class="mode-toggle">
+      <button onclick="setMode('cpu')">Play vs Computer</button>
+      <button onclick="setMode('friend')">Play vs Friend</button>
+    </div>
+
+    <div class="scoreboard">
+      <p>👤 Player 1: <span id="user-score">0</span></p>
+      <p>🧑‍🤝‍🧑 <span id="player2-label">Computer</span>: <span id="computer-score">0</span></p>
+    </div>
+
+    <div id="countdown" class="countdown">3</div>
+
+    <div class="choices">
+      <div id="player1-buttons">
+        <p>Player 1:</p>
+        <button onclick="choose('rock', 1)">✊</button>
+        <button onclick="choose('paper', 1)">✋</button>
+        <button onclick="choose('scissors', 1)">✌️</button>
+      </div>
+      <div id="player2-buttons" class="hidden">
+        <p>Player 2:</p>
+        <button onclick="choose('rock', 2)">✊</button>
+        <button onclick="choose('paper', 2)">✋</button>
+        <button onclick="choose('scissors', 2)">✌️</button>
+      </div>
+    </div>
+
+    <div class="result">
+      <p id="user-choice">Player 1: -</p>
+      <p id="computer-choice">Player 2: -</p>
+      <p id="winner">Winner: -</p>
+    </div>
+
+    <button class="reset" onclick="resetGame()">🔄 Reset Game</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
